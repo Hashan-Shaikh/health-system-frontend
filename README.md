@@ -1,3 +1,5 @@
+A healthcare management system using Next.js, enabling patients to book online consultations with doctors. Implemented various consultation types, including in-home and in-clinic appointments, to enhance patient care accessibility.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
