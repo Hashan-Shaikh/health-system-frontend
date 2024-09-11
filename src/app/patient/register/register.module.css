@@ -1,0 +1,34 @@
+.customFields>div>div>div{
+    background-color: #1A1D21 !important;
+}
+.customFields>div>div>div:hover{
+    background-color: #1A1D21 !important;
+}
+.customFields>div>div>div>div>input{
+    color:white !important;
+}
+.fieldNames{
+    color: #ABB8C4;
+}
+.fieldPhone>div>input{
+    background-color:#1A1D21 !important;
+    border-radius: 10px;
+    height: 39px;
+    color: white !important;
+}
+.fieldPhone>div>input:focus{
+    background-color:#1A1D21 !important;
+    border-radius: 10px;
+    height: 39px;
+    color: white !important;
+}
+.customBorder>div>div{
+    background-color: #1A1D21 !important;
+}
+.radio>div>div>label>div>span{
+    font-size: small;
+}
+.radio>div>div>label>span:nth-child(2){
+    border: black !important;
+}
+
