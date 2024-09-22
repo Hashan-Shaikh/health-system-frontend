@@ -4,7 +4,7 @@ import StepperComponent from './Stepper';
 import Step1 from './Step1';
 // import Step2 from './Step2';
 import { useRouter } from 'next/navigation';
-import PatientRegistrationHeader from './Header';
+import Navbar from '../../Navbar';
 // import UserSubmissionModal from './UserSubmissionModal';
 // import {post} from '../../service/GenericApiService';
 
@@ -82,8 +82,10 @@ const CreateUserPage = () => {
 
   return ( 
     <>
-      <PatientRegistrationHeader />  
-      <div className='mt-3'>
+      <div className='ml-20 mt-5'>
+        <Navbar />
+      </div>
+      <div className='mt-5'>
         <StepperComponent activeStep={activeStep} />
       </div>
       <div className='flex justify-center w-full h-full pt-3'>

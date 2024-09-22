@@ -1,0 +1,18 @@
+.fieldNames{
+    color: #ABB8C4;
+}
+.fieldStyle>div>div>div{
+    background-color:#1A1D21 !important
+}
+.fieldPhone>div>input{
+    background-color:#1A1D21 !important;
+    border-radius: 10px;
+    height: 39px;
+    color: white !important;
+}
+.fieldPhone>div>input:focus{
+    background-color:#1A1D21 !important;
+    border-radius: 10px;
+    height: 39px;
+    color: white !important;
+}

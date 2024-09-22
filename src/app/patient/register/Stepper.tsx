@@ -43,7 +43,7 @@ const CustomStepIconRoot = styled('div')<{
   justifyContent: 'center',
   borderRadius: '50%',
   ...(ownerState.active && {
-    backgroundColor: 'green', // Color for active step
+    backgroundColor: '#06b6d4', // Color for active step
   }),
 }));
 

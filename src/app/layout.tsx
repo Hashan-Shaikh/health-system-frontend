@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { NextUIProvider } from "@nextui-org/react";
+import { Card, NextUIProvider } from "@nextui-org/react";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NextUIProvider>{children}</NextUIProvider>
+        <NextUIProvider><Card className="cardContainer">{children}</Card></NextUIProvider>
       </body>
     </html>
   );

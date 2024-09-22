@@ -1,0 +1,21 @@
+.customTableContainer>div>table>thead>tr>th{
+    background-color: black !important;
+    color: #ABB8C4;
+    font-weight: lighter;
+}
+/* .customTableContainer>div>table>tbody:nth-child(even){
+    background-color: black !important;
+} */
+.customTableContainer>div>table>tbody>tr:nth-child(even){
+    background-color: black !important;
+}
+/* .customTableContainer>div>table>tbody>tr>td{
+    border-radius: 10px;
+} */
+.customPaginator>nav>ul>li{
+    background-color: black;
+    color: white;
+}
+.customPaginator>nav>ul>li:hover{
+    background-color: black !important;
+}

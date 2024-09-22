@@ -1,7 +1,7 @@
 'use client'
 import Navbar from '@/app/Navbar'
 import React from 'react'
-import {Input} from "@nextui-org/react";
+import {Button, Input} from "@nextui-org/react";
 import styles from './register.module.css';
 import {MailIcon} from './MailIcon';
 import PhoneInput from 'react-phone-number-input';
@@ -16,8 +16,8 @@ const PersonalInformation = ({handleBack, handleNext, activeStep, steps}: any) =
     const { register, handleSubmit, setValue } = useForm();
 
   return (
-    <div className='w-screen h-screen grid grid-cols-5'>
-        <div className='col-span-4'>
+    <div className='w-screen h-screen'>
+        <div>
             <div className='ml-20 mt-5 flex flex-col gap-5 '>
                 <div className=''>
                     <h1 className='text-2xl font-bold'>Personal Information</h1>
@@ -91,8 +91,9 @@ const PersonalInformation = ({handleBack, handleNext, activeStep, steps}: any) =
                 </div>
             </div>
         </div>
-        <div className='col-span-1 border-2 border-yellow-100 h-2/3'>
-            <img src='' className='h-full' />
+        <div className='flex justify-between my-5 mx-20'>
+            <Button className='my-2 bg-sky-500 text-white'>Back</Button>
+            <Button className='my-2 bg-sky-500 text-white'>Next</Button>
         </div>
     </div>
   )
