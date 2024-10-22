@@ -22,7 +22,7 @@ const CreateUserPage = () => {
     }
   
   return ( 
-    <div className='grid grid-cols-4 w-screen h-screen overflow-y-auto'>
+    <div className='grid grid-cols-3 lg:grid-cols-4 w-screen h-screen overflow-y-auto'>
       <div className='col-span-3 mb-20'>
         <div className='mx-20'>
           <img src='../Logo.svg' className='h-24 w-24' alt='main-logo' />
@@ -37,7 +37,7 @@ const CreateUserPage = () => {
           <Button onClick={submitRequest} className='mt-10 bg-sky-500 text-white w-full'>Submit And Continue</Button>
         </div>
       </div>
-      <div className='relative col-span-1'>
+      <div className='relative lg:block hidden col-span-1'>
         <img src="../Illustration.svg" alt="side-photo" className='absolute inset-y-0 right-0' />
       </div>
     </div>
