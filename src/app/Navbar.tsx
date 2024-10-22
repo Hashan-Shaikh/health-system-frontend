@@ -5,7 +5,7 @@ const Navbar = () => {
     <div className='flex justify-between'>
       <div className=''>
         <div className='flex'>
-          <img className='pr-2 w-10 h-8' src='/2744.jpg' />
+          <img className='pr-2 w-25 h-25' src='/Logo.svg' />
           <h1 className='font-bold'>CarePulse</h1>
         </div>
         <div className='mt-10'>

@@ -5,35 +5,41 @@ import {MailIcon} from '../patient/register/MailIcon';
 import styles from './onboarding.module.css';
 import PhoneInput from 'react-phone-number-input';
 import {useForm} from 'react-hook-form';
+import Image from 'next/image';
+import 'react-phone-number-input/style.css';
+import { useRouter } from 'next/navigation';
 
 const OnBoardingPage = () => {
 
     const { register, handleSubmit, setValue } = useForm();
+    const router = useRouter();
+    
+    const submitRequest = () => {
+        router.push('/patient/register');
+    }
 
   return (
-    <div className='grid grid-cols-4 h-screen w-screen'>
-        <div className='col-span-2 h-full'>
-            <div className='flex my-10 mx-20'>
-                <img className='w-10 h-8' src='/2744.jpg' alt='logo' />
-                <p className='font-bold px-2'>CarePlus</p>
+    <div className='grid grid-cols-1 lg:grid-cols-2 w-screen h-screen'>
+        <section className='col-span-1 h-full'>
+            <div className='my-5 mx-20'>
+                <img className='w-24 h-24' src='/Logo.svg' alt='logo' />
             </div>
-            <div className='m-20'>
-                <h1 className='font-bold text-4xl'>Hi there, ....</h1>
-                <p className={`pt-2 ${styles.fieldNames}`}>Get Started with Appointments.</p>
+            <div className='my-5 mx-20'>
+                <h1 className='font-bold text-3xl'>Hi there, ....</h1>
+                <p className={`pt-2 ${styles.fieldNames}`}>Get Start with Appointments</p>
             </div>
-            <form className='m-20 h-full'>
+            <form className='mx-20'>
                 <div className={`mt-3 ${styles.fieldStyle}`}>
-                    <p className={`${styles.fieldNames}`}>Full name</p>
+                    <p className={`${styles.fieldNames} text-small py-2`}>Full Name</p>
                     <Input
                     type="text"
                     placeholder='Enter the name'
                     />
                 </div>
                 <div className={`mt-3 ${styles.fieldStyle}`}>
-                    <p className={`${styles.fieldNames}`}>Email</p>
+                    <p className={`${styles.fieldNames} text-small py-2`}>Email</p>
                     <Input
                     type="email"
-                    //label="Email"
                     placeholder="you@example.com"
                     labelPlacement="outside"
                     startContent={
@@ -41,20 +47,17 @@ const OnBoardingPage = () => {
                     }
                     />
                 </div>
-                {/* <div className={`mt-3 ${styles.fieldPhone}`}>
-                    <p className={`${styles.fieldNames}`}>Phone number</p>
-                    <PhoneInput
-                             defaultCountry="US"
-                            onChange={(value) => setValue('phone', value)}
-                            className=''
-                    />
-                </div> */}
-                <Button className='mt-10 bg-sky-500 text-white w-full'>Get Started</Button>
+                <div className={`mt-3 ${styles.fieldPhone}`}>
+                    <p className={`${styles.fieldNames} text-small py-2`}>Phone number</p>
+                    <PhoneInput className='px-2' defaultCountry='US' onChange={(val) => setValue('phone', val)} />
+                </div>
+                <Button onClick={submitRequest} className='mt-10 bg-sky-500 text-white w-full'>Get Started</Button>
             </form>
-        </div>
-        <Card className='rounded-lg col-span-2 h-full'>
-            <img src='/onboarding.svg' alt='onboarding-pic' className='h-full w-full object-cover' />
-        </Card>
+            <Image src='./copyright.svg' alt='copyright-img' width={120} height={120} className='mt-40 mx-20' />
+        </section>
+        <div className='hidden lg:block col-span-1 relative h-full'>
+            <Image src='./onboarding.svg' alt='onboarding-pic' fill className='object-cover' />
+        </div>   
     </div>
   )
 }

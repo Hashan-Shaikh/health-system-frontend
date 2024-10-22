@@ -12,12 +12,12 @@ const Doctors = [
   {
     id: 2,
     name: 'Dr Sara',
-    img: 'doctor.jpg',
+    img: '/doctor.jpg',
   },
   {
     id: 3,
     name: 'Dr Fresor',
-    img: 'doctor2.jpeg',
+    img: '/doctor2.jpeg',
   },
 ]
 

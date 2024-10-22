@@ -13,13 +13,13 @@
 .fieldPhone>div>input{
     background-color:#1A1D21 !important;
     border-radius: 10px;
-    height: 39px;
+    height: 2.5rem;
     color: white !important;
 }
 .fieldPhone>div>input:focus{
     background-color:#1A1D21 !important;
-    border-radius: 10px;
-    height: 39px;
+    /* border-radius: 10px;
+    height: 2.5rem; */
     color: white !important;
 }
 .customBorder>div>div{
@@ -30,5 +30,8 @@
 }
 .radio>div>div>label>span:nth-child(2){
     border: black !important;
+}
+.customDropdown>div>div>button{
+    background-color:#1A1D21 !important;
 }
 

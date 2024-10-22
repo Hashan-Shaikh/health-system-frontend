@@ -1,0 +1,29 @@
+# Ignore node modules (this will be installed inside the Docker container)
+node_modules
+
+# Ignore logs
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore Git repository files
+.git
+.gitignore
+
+# Ignore Dockerfile and docker-related files
+Dockerfile
+.dockerignore
+
+# Ignore TypeScript cache and config files (if they're not needed for the final production build)
+tsconfig.json
+next-env.d.ts
+
+# Ignore local environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore Next.js specific files that are not needed in production
+README.md

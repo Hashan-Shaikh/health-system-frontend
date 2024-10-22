@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NextUIProvider><Card className="cardContainer">{children}</Card></NextUIProvider>
+        <NextUIProvider><div className="cardContainer">{children}</div></NextUIProvider>
       </body>
     </html>
   );

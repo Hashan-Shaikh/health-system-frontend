@@ -67,11 +67,15 @@ const Patients = [
     },
 ]
 
-const Chips = {
-    'scheduled': 'success',
-    'pending': 'warning',
-    'canceled': 'danger',
-}
+type Status = 'scheduled' | 'pending' | 'canceled';
+
+type ChipColor = "success" | "warning" | "danger" | "default" | "primary" | "secondary";
+
+const Chips: Record<Status, ChipColor> = {
+  scheduled: 'success',  // Matches allowed color type
+  pending: 'warning',
+  canceled: 'danger',
+};
 
 export default function CustomTable() {
 
@@ -131,7 +135,7 @@ export default function CustomTable() {
         {(item) => (<TableRow key={item.patient}>
           <TableCell>{item.patient}</TableCell>
           <TableCell>{item.date}</TableCell>
-          <TableCell><Chip className="text-xs" startContent={item.statusIcon} variant="flat" color={Chips[item.status]}>{item.status}</Chip></TableCell>
+          <TableCell><Chip className="text-xs" startContent={item.statusIcon} variant="flat" color={Chips[item.status as Status]}>{item.status}</Chip></TableCell>
           <TableCell className="flex gap-2">
             <Avatar src={item.doctorImg} />
             <div className="flex items-center">
