@@ -1,0 +1,39 @@
+- name: Setup Docker and Deploy Application
+  hosts: web_server
+  become: yes
+  tasks:
+    - name: Update the system
+      yum:
+        name: "*"
+        state: latest
+
+    - name: Install Docker
+      yum:
+        name: docker
+        state: present
+
+    - name: Start and enable Docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Add ec2-user to Docker group
+      user:
+        name: ec2-user
+        groups: docker
+        append: yes
+
+    - name: Pull Docker image from Docker Hub
+      docker_image:
+        name: hashanalam/health-system-frontend
+        tag: latest
+        source: pull
+
+    - name: Run Docker container
+      docker_container:
+        name: health_system_frontend
+        image: hashanalam/health-system-frontend:latest
+        state: started
+        ports:
+          - "3000:3000"
