@@ -7,7 +7,7 @@ const CardContent = [
     {
         id: 1,
         logo: '/scheduled.svg',
-        number: 94,
+        number: 95,
         text: 'Total number of scheduled appointments'
     },
     {

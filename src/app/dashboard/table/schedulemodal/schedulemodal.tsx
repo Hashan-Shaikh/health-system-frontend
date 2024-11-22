@@ -1,5 +1,5 @@
 'use client'
-import CustomDropDown from "@/app/components/dropdown/Dropdown";
+import CustomDropDown from "../../../components/dropdown/Dropdown";
 import {Modal,DatePicker ,ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Textarea} from "@nextui-org/react";
 import styles from './schedulemodal.module.css';
 
@@ -10,11 +10,11 @@ export default function ScheduleModal({isOpen = false, setScheduleModal}: any) {
     }
 
   return (
-    <>
+    <div>
       <Modal className="bg-black" isOpen={isOpen}>
         <ModalContent>
           {(onClose) => (
-            <>
+            <div>
               <ModalHeader className="">
                 Schedule Appointment
               </ModalHeader>
@@ -41,10 +41,10 @@ export default function ScheduleModal({isOpen = false, setScheduleModal}: any) {
                   Schedule Appointment
                 </Button>
               </ModalFooter>
-            </>
+            </div>
           )}
         </ModalContent>
       </Modal>
-    </>
+    </div>
   );
 }

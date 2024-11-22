@@ -36,3 +36,19 @@ yarn-error.log*
 next-env.d.ts
 
 .env.development
+
+# Local Terraform state
+*.tfstate
+*.tfstate.backup
+
+# Terraform plan files
+*.tfplan
+
+# Terraform working directory
+.terraform/
+
+# Sensitive variables
+terraform.tfvars
+
+# Lock file
+.terraform.lock.hcl
