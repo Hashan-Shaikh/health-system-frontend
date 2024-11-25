@@ -8,4 +8,4 @@ describe('Dashboard Page Snapshot Test', () => {
     // Expect the rendered output of all cards to match the stored snapshot
     expect(asFragment()).toMatchSnapshot();
   });
-});
+}); 

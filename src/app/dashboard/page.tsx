@@ -7,7 +7,7 @@ const CardContent = [
     {
         id: 1,
         logo: '/scheduled.svg',
-        number: 95,
+        number: 94,
         text: 'Total number of scheduled appointments'
     },
     {
@@ -24,7 +24,7 @@ const CardContent = [
     },
 ]
 
-const DashboardPage = () => {
+const DashboardPage = () => { 
   return (
     <div className='h-full w-full overflow-auto'>
         <div className='mt-5 ml-5'>
